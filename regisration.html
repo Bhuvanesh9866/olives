@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Event Registration Form</h2>
+    <form action="submit_registration.php" method="POST">
+        
+        <!-- Name -->
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <!-- Email -->
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <!-- Gender -->
+        <div class="form-group">
+            <label>Gender</label>
+            <label><input type="radio" name="gender" value="male" required> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+        </div>
+        
+        <!-- Phone Number -->
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        
+        <!-- Event Selection -->
+        <div class="form-group">
+            <label for="event">Select Event</label>
+            <select id="event" name="event" required>
+                <option value="devops_intro">Introduction to DevOps</option>
+                <option value="ci_cd">CI/CD Pipeline</option>
+                <option value="cloud_computing">Cloud Computing</option>
+                <option value="containerization">Containerization with Docker</option>
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group">
+            <input type="submit" value="Register">
+        </div>
+        
+    </form>
+</div>
+
+</body>
+</html>
